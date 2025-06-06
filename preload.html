@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Foreignhand Pamigay - Loading...</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Segoe UI Black', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    /* Mas maliit na title */
+    h1 {
+      font-size: 2rem;
+      color: #ffcc00;
+      margin-bottom: 10px;
+      letter-spacing: 1.2px;
+      animation: blackflame 1.5s ease-in-out infinite;
+    }
+
+    /* Flame effect na itim */
+    @keyframes blackflame {
+      0% { text-shadow: 0 0 5px #000, 0 0 10px #000; }
+      50% { text-shadow: 0 0 10px #222, 0 0 15px #333; }
+      100% { text-shadow: 0 0 5px #000, 0 0 10px #000; }
+    }
+
+    p {
+      font-size: 1rem;
+      color: #ccc ;
+margin-bottom: 30px;
+    }
+
+    .loader-bar {
+      width: 80%;
+      height: 10px;
+      background-color: #333;
+      border-radius: 5px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .loader-inner {
+      height: 100%;
+      background-color: #28a745;
+      width: 0%;
+      animation: loading 4s linear infinite;
+    }
+
+    @keyframes loading {
+      0% { width: 0%; }
+      50% { width: 50%; }
+      100% { width: 100%; }
+    }
+
+    .loading-text {
+      font-size: 1rem;
+      color: #aaa;
+      margin-top: 10px;
+    }
+
+  </style>
+  <script>
+    setTimeout(function() {
+      window.location.href = "https://foreignhand.pages.dev/";
+    }, 4000);
+  </script>
+</head>
+<body>
+  <h1>Foreignhand Pamigay</h1>
+  <p>Don’t forget to register</p>
+<div class="loader-bar">
+    <div class="loader-inner"></div>
+  </div>
+
+  <div class="loading-text">Loading rewards center...</div>
+</body>
+</html>
